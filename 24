@@ -1,0 +1,49 @@
+#Name = Oier O'Callaghan
+
+print("This program can find the perimeter or area of a quadrilateral Q")#(i)
+length = float(input("Enter the length: "))#(iii)
+width = float(input("Enter the width: "))#(iii)
+
+name = input("Enter your user name: ")#(ii)
+choice = input("Do you want to find the (p)erimeter or (a)rea? ")
+if choice == "p":
+    size = round((2 * length) + (2 * width), (2))#(vi)
+    print("A quadrilater with a length of", length, "and a width of", width, "has a perimeter of:", size)#(v)
+elif choice == "a":
+    size = round(length*width, (2))#(iv)
+    print("A quadrilater with a length of", length, "and a width of", width, "has an area of:", size)#(v)
+    
+print("Thank you for using the program", name)#(ii)
+
+import random
+
+computer_options = ["rock", "paper", "scissors"]
+user = input("Enter rock, paper or scissors: ")#(i)
+print("player chose: ",user)#(i)
+
+computer_choice = computer_options [random.randint(0,2)]
+print("Computer chose: ",computer_choice)#(i)
+
+if computer_choice == "rock" and user == "scissors":
+    print("Computer wins")
+elif computer_choice == "paper" and user == "rock":
+    print("computer wins")
+elif computer_choice == "scissors" and user == "paper":
+    print("computer wins")
+elif computer_choice == "rock" and user == "rock":
+    print("draw")
+elif computer_choice == "paper" and user == "paper":
+    print("draw")
+elif computer_choice == "scissors" and user == "scissors":
+    print("draw!")
+else:
+    print("Player wins")
+
+def revenue():
+    vip = int(input("Enter the amount of VIP tickets sold: "))
+    regular = int(input("Enter the amount of regular tickets sold: "))
+    budget = int(input("Enter the amount of budget tickets sold: "))
+    equal = (vip * 150) + (regular * 75) + (budget * 40)
+    print("€",equal)
+
+revenue()
